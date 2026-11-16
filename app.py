@@ -354,7 +354,7 @@ with c1:
     n6 = st.select_slider("Beobachtungen n", options=list(C.N6_OPTIONS), key="n6_select")
 with c2:
     theta6 = st.slider("Effektstärke θ im Einzelfall", *P.bounds("theta6_slider"), key="theta6_slider", step=0.5,
-                       help="θ = Effekt / Standardfehler. θ = 0: reines Rauschen; θ ≥ 3: der Effekt ist fast immer deutlich.")
+                       help="θ = Effekt / Standardfehler. θ = 0: reines Rauschen; θ ≥ 3: der Effekt wird meist aufgenommen (n = 100, θ = 3: AIC 94,4 %, BIC 80,1 %).")
 with c3:
     reps6 = st.slider("Wiederholungen im Vehikel", *P.bounds("reps6_slider"), key="reps6_slider", step=100)
 a6 = _after(n6, reps6, cfg.seed)

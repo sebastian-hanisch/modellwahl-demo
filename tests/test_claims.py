@@ -155,7 +155,7 @@ def test_b3_tipping_points_and_the_pair_formula():
     assert de(T.lambda_approx(300, 3.0, 3.0), 2) == "6,86"
     z = FROZEN["zellen"]["s3_n300"]
     assert de(z["mean_lambda"], 2) == "6,74" and pc(z["paar_formel"]["AIC"]) == "88,1 %" and pc(z["paar_formel"]["BIC"]) == "58,3 %"
-    has("den Wert 6,86", "das mittlere `λ` über die 1000 Datensätze der Zelle ist 6,74", "Dort liegt der Paarvergleich bei 88,1 % (AIC) und 58,3 % (BIC)")
+    has("den Wert 6,86", "das mittlere `λ` über die 1000 Datensätze der Zelle ist 6,74", "Das Mittel der Paarwahrscheinlichkeiten über diese 1000 Datensätze liegt bei 88,1 % (AIC) und 58,3 % (BIC) im Paarvergleich")
     assert pc(100 - z["shares"]["AIC"][0]) == "89,7 %" and pc(100 - z["shares"]["BIC"][0]) == "58,2 %"
     has("in 89,7 % (AIC) und 58,2 % (BIC)")
     assert abs(float(T.p_choose_bigger(300, 4, 0.0, "AIC")) - T.p_include_noise(300, 4, "AIC")) < 1e-12

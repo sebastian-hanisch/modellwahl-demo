@@ -315,7 +315,7 @@ def test_presets_help_names_measured_numbers():
 
 def test_app_texts_do_not_use_planning_words():
     text = (ROOT / "app.py").read_text(encoding="utf-8") + (ROOT / "README.md").read_text(encoding="utf-8")
-    for word in ("Phase 0", "Vormessung", "Plan Z", " Stück ", "geplant", "Saatwert"):
+    for word in ("Phase 0", "Vormessung", "Plan Z", " Stück ", "geplant", "Saatwert", "des Bauers"):
         assert word not in text, word
 
 

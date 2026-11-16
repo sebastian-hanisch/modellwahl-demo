@@ -145,7 +145,7 @@ def _inv(a: np.ndarray) -> np.ndarray:
 
 
 def all_subsets(k_noise: int) -> list:
-    """Alle Teilmengen der Spalten 1 (Zoll), 2 (Wochenende) und der Rauschmerkmale; der Achsenabschnitt (Spalte 0) ist immer dabei. 2^(2 + k_noise) Stück, Reihenfolge nach den Bits."""
+    """Alle Teilmengen der Spalten 1 (Zoll), 2 (Wochenende) und der Rauschmerkmale; der Achsenabschnitt (Spalte 0) ist immer dabei. 2^(2 + k_noise) Teilmengen, Reihenfolge nach den Bits."""
     out = []
     for code in range(2 ** (2 + k_noise)):
         out.append(np.array([0] + [j + 1 for j in range(2 + k_noise) if (code >> (1 + k_noise - j)) & 1]))

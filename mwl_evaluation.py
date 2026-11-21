@@ -2,7 +2,7 @@
 
 1  Ein Datensatz, vier Kriterien (Handbeispiel in Brüchen, gezogener Datensatz in Gleitkomma)
 2  Wie oft findet ein Kriterium den wahren Grad (Polynom vom Grad 3, Kandidaten 0 bis 8)
-3  Signal gegen Schwelle (Nichtzentralität, Überanpassung gegen n; vorgerechnet in mwl_frozen.json)
+3  Signal gegen Schwelle (Nichtzentralität, Overfitting gegen n; vorgerechnet in mwl_frozen.json)
 4  Wenn es keinen wahren Grad gibt (Export-Vorlauf)
 5  Welche Merkmale (Import mit Rauschmerkmalen, alle Teilmengen)
 6  Was nach der Wahl gilt (Überdeckung, Signifikanz gewählter Rauschmerkmale, Datenteilung)
@@ -205,7 +205,7 @@ def verdict_frequency(f: Frequency) -> tuple:
 
 
 # =====================================================================================================================================
-# Experiment 3: Signal gegen Schwelle (Formeln; Zellen und Überanpassung aus mwl_frozen.json)
+# Experiment 3: Signal gegen Schwelle (Formeln; Zellen und Overfitting aus mwl_frozen.json)
 # =====================================================================================================================================
 
 @dataclass

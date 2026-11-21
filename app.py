@@ -267,7 +267,7 @@ with c2:
     st.caption(f"Vorgerechnet: {de_int(frozen['pool']['reps'])} Wiederholungen je n, Kandidaten Grad 3 bis 8 (der Erzeuger ist enthalten), ohne Daten aus Quadratsummen von χ²-Größen.")
 _show(ev.verdict_signal(sig))
 _show(ev.verdict_overfit(frozen))
-with st.expander("Tabelle: Überanpassung gegen n (vorgerechnet)"):
+with st.expander("Tabelle: Overfitting gegen n (vorgerechnet)"):
     tab = frozen["pool"]["n"]
     _table(pd.DataFrame([{"n": de_int(int(n)), **{k: pct(100.0 - tab[n][k][0], 2) for k in ("AIC", "AICc", "BIC")}} for n in sorted(tab, key=int)]))
     st.caption(f"Anteil „Grad > 3“ unter den Graden 3 bis 8. Grenzwert n → ∞ für AIC: {pct(frozen['grenzwert']['wert'], 2)} ({de_int(frozen['grenzwert']['reps'])} Wiederholungen der Irrfahrt).")
